@@ -49,6 +49,7 @@ func main() {
 			out += fmt.Sprintf("%s:\n%s\n\n", k, v)
 		}
 		if err := email(name+" form submission", out, []string{"info@radixproject.org"}); err != nil {
+			log.Println(err)
 			return c.Status(500).JSON(fiber.Map{
 				"error":   true,
 				"message": "Failed to submit form",
