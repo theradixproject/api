@@ -1,6 +1,5 @@
 builds:
   - id: api
-    dir: ./cmd/api
     binary: api
     goos:
       - linux
